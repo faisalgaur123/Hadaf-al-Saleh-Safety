@@ -149,5 +149,34 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility text-gradient-fire {
+  background: var(--gradient-fire);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-fire {
+  background: var(--gradient-fire);
+}
+
+@utility bg-gradient-dark {
+  background: var(--gradient-dark);
+}
+
+@utility shadow-fire {
+  box-shadow: var(--shadow-fire);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
 }
