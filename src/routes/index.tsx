@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Flame, ShieldCheck, Droplets, Wind, Sparkles, Waves, Cloud,
-  BellRing, Gauge, ExtinguisherIcon, DoorClosed, Phone, Mail, MapPin,
+  BellRing, Gauge, FireExtinguisher, DoorClosed, Phone, Mail, MapPin,
   ArrowRight, CheckCircle2, Award, Users, Lightbulb, Menu, X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,7 @@ const services = [
   { icon: Cloud, title: "Novec 1230 Suppression", desc: "A clean-agent halon replacement offering the highest margin of safety for human occupancy among modern clean agents." },
   { icon: BellRing, title: "Fire Alarm System", desc: "Addressable and conventional systems for early detection — audio-visual devices for smoke, fire and carbon-monoxide monitoring." },
   { icon: Gauge, title: "Fire Pump", desc: "NFPA 20-designed, UL listed / FM approved pumps for commercial and industrial buildings, retrofits and foam / water-mist applications." },
-  { icon: ExtinguisherIcon, title: "Fire Extinguishers", desc: "Supply and installation of water, foam, dry powder, CO2 and wet-chemical extinguishers rated for every fire class." },
+  { icon: FireExtinguisher, title: "Fire Extinguishers", desc: "Supply and installation of water, foam, dry powder, CO2 and wet-chemical extinguishers rated for every fire class." },
   { icon: DoorClosed, title: "Fire Doors", desc: "UL-listed fire-rated doors engineered for high-transit environments — shopping centers, public buildings and industrial facilities." },
 ];
 
