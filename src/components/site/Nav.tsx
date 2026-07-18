@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/hadaf-logo.png.asset.json";
+import logoAsset from "@/assets/hadaf-logo.png";
 
 const links = [
   { label: "Home", to: "/" as const },
@@ -18,7 +18,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Hadaf Al Sahel Safety" className="h-12 w-auto sm:h-14" />
+          <img src={logoAsset} alt="Hadaf Al Sahel Safety" className="h-12 w-auto sm:h-14" />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (

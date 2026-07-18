@@ -33,7 +33,7 @@ function ProjectsPage() {
       <main>
         <section className="relative overflow-hidden">
           <div className="absolute inset-0">
-            <img src={heroImg} alt="" className="h-full w-full object-cover animate-ken-burns" />
+            <img src={heroImg} alt="" className="h-full w-full object-cover object-bottom animate-ken-burns" />
             <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
           </div>
           <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">

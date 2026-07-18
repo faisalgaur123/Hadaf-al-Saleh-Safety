@@ -206,3 +206,9 @@
 @utility animate-hero-in {
   animation: hero-fade-up 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+@utility animate-ember-drift {
+  animation: ember-drift var(--drift-duration, 10s) linear infinite;
+  will-change: transform, opacity;
+}
+
