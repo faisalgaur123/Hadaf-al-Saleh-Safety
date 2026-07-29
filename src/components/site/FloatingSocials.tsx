@@ -27,7 +27,7 @@ export function FloatingSocials() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/966500000000" // Replace with actual business WhatsApp number
+        href="https://wa.me/966501946981" // Business WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25d366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-[#25d366]/30 active:scale-95"
