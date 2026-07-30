@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import faviconAsset from "@/assets/title-logo.PNG";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { FloatingSocials } from "@/components/site/FloatingSocials";
+import { WhatsAppWidget } from "@/components/site/WhatsAppWidget";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 function NotFoundComponent() {
@@ -129,6 +130,7 @@ function RootComponent() {
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
         <FloatingSocials />
+        <WhatsAppWidget />
       </LanguageProvider>
     </QueryClientProvider>
   );
