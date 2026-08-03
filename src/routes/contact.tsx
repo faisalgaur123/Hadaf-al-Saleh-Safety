@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Clock, Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Twitter, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -81,7 +81,15 @@ function ContactPage() {
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-fire"><MapPin className="h-5 w-5 text-primary-foreground" /></div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest text-white/60">{t("location")}</div>
-                    <div className="mt-1 font-medium text-white">{t("kingdomSaudiArabia")}</div>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=7424+Al+Khalifah+Al+Maamoun,+3650,+Al+Khalidiyyah,+Riyadh+12873,+Saudi+Arabia"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 font-medium text-white hover:text-accent transition-colors inline-flex items-center gap-1.5"
+                    >
+                      {t("kingdomSaudiArabia")}
+                      <ExternalLink className="h-3.5 w-3.5 opacity-70" />
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -189,24 +197,49 @@ function ContactPage() {
 
         <section className="bg-gradient-dark border-t border-white/5 py-16 sm:py-20 text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-8 text-center sm:text-left">
-              <h3 className="text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">
-                {isAr ? "موقعنا على الخريطة" : "Our Location"}
-              </h3>
-              <p className="mt-2 text-sm text-white/60">
-                {isAr ? "الرياض - حي الخالدية - شارع الخليفة المأمون" : "Al-Khalifa Al-Mamoun Street,Al-Khalidiyah District, Riyadh kingdom of Saudia Arabia"}
-              </p>
+            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 className="text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">
+                  {isAr ? "موقعنا على الخريطة" : "Our Location"}
+                </h3>
+                <p className="mt-2 text-sm text-white/60">
+                  {isAr ? "7424 شارع الخليفة المأمون، 3650، حي الخالدية، الرياض 12873، المملكة العربية السعودية" : "7424 Al Khalifah Al Maamoun, 3650, Al Khalidiyyah, Riyadh 12873, Saudi Arabia"}
+                </p>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=7424+Al+Khalifah+Al+Maamoun,+3650,+Al+Khalidiyyah,+Riyadh+12873,+Saudi+Arabia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-fire px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-fire transition-all hover:opacity-95 self-start sm:self-auto"
+              >
+                <MapPin className="h-4 w-4" />
+                {isAr ? "فتح في خرائط جوجل" : "Open in Google Maps"}
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-2 backdrop-blur">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-2 backdrop-blur">
+              <div className={`absolute top-5 ${isAr ? "right-5" : "left-5"} z-10 flex items-center gap-3 rounded-xl border border-white/20 bg-slate-950/90 px-4 py-3 backdrop-blur-md shadow-2xl`}>
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-fire shadow-fire">
+                  <MapPin className="h-5 w-5 text-primary-foreground animate-pulse" />
+                </div>
+                <div>
+                  <div className="text-sm font-black uppercase text-white tracking-wide">
+                    {isAr ? "مؤسسة هدف الساحل للسلامة" : "Hadaf Al Sahel Safety"}
+                  </div>
+                  <div className="text-xs text-white/70">
+                    {isAr ? "7424 شارع الخليفة المأمون - حي الخالدية - الرياض" : "7424 Al Khalifah Al Maamoun, Al Khalidiyyah, Riyadh"}
+                  </div>
+                </div>
+              </div>
               <iframe
-                src="https://maps.google.com/maps?q=Al%20Khalifa%20Al%20Mamoun%20Street,%20Al%20Khalidiyah,%20Riyadh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Hadaf%20Al%20Sahel%20Safety%20-%20%D9%87%D8%AF%D9%81%20%D8%A7%D9%84%D8%B3%D8%A7%D8%AD%D9%84%20%D9%84%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A9@24.625109,46.7529149&t=&z=17&ie=UTF8&iwloc=B&output=embed"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-xl grayscale invert contrast-125 opacity-75 transition-all duration-300 hover:grayscale-0 hover:invert-0 hover:opacity-100"
+                className="rounded-xl transition-all duration-300 opacity-95 hover:opacity-100"
               ></iframe>
             </div>
           </div>

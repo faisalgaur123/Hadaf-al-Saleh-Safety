@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Flame, ArrowRight, Check, Mail, MapPin, Phone, Star, Quote, Building2, Factory, Fuel, Warehouse, FileCheck2, ShieldCheck, Award, Clock } from "lucide-react";
+import { Flame, ArrowRight, Check, Mail, MapPin, Phone, Star, Quote, Building2, Factory, Fuel, Warehouse, FileCheck2, ShieldCheck, Award, Clock, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -368,7 +368,15 @@ function CTAStrip() {
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-fire"><MapPin className="h-5 w-5 text-primary-foreground" /></div>
                 <div>
                   <div className="text-[10px] font-bold uppercase tracking-widest text-white/50">{t("location")}</div>
-                  <div className="mt-0.5 font-medium text-white">{t("kingdomSaudiArabia")}</div>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=7424+Al+Khalifah+Al+Maamoun,+3650,+Al+Khalidiyyah,+Riyadh+12873,+Saudi+Arabia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-0.5 font-medium text-white hover:text-accent transition-colors inline-flex items-center gap-1.5"
+                  >
+                    {t("kingdomSaudiArabia")}
+                    <ExternalLink className="h-3.5 w-3.5 opacity-70" />
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
